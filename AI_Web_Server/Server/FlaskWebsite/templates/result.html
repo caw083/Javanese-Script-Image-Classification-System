@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        body {
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ccc;
+            margin-top: 20px;
+        }
+    </style>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100" style="background-image: url('static/background.jpg');  
+background-size: cover; 
+background-position: center; 
+font-family: 'Noto Sans', sans-serif;
+opacity: 0.9">
+    <h1>Processed Image</h1>
+    {% if image_url %}
+        <img src="{{ image_url }}" alt="Processed Image">
+    {% else %}
+        <p>No image to display.</p>
+    {% endif %}
+    <a href="/">Go Back</a>
+</body>
+</html>
